@@ -5,7 +5,7 @@
 [Brewlet](https://brewlet.sh) lets teams ship Java applications as OCI artifacts
 without a Dockerfile, OS base image, or bundled JVM. A node-resident JVM runs the
 application inside a Kubernetes-managed sandbox, so runtime patching and resource
-management stay with the platform while developers ship only their application.
+management stay with the platform while developers ship only their applications.
 
 At a high level, Brewlet uses a node provisioner to install the runtime, a
 containerd shim to execute Java payloads, and a Kubernetes `RuntimeClass` to route
