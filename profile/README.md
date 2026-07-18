@@ -14,10 +14,16 @@ deployment experience.
 
 ## Repositories
 
-- [`brewlet/brewlet`](https://github.com/brewlet/brewlet) — core runtime, operator, CLI, and documentation
-- [`brewlet/kubernetes`](https://github.com/brewlet/kubernetes) — Kubernetes deployment assets
-- [`brewlet/maven-plugin`](https://github.com/brewlet/maven-plugin) — Maven integration
-- [`brewlet/specs`](https://github.com/brewlet/specs) — architecture and specifications
-- [`brewlet/integration-tests`](https://github.com/brewlet/integration-tests) — end-to-end integration tests
-- [`brewlet/site`](https://github.com/brewlet/site) — source for [brewlet.sh](https://brewlet.sh)
-- [`brewlet/.github`](https://github.com/brewlet/.github) — organization profile and community health files
+| Repository | Owns |
+|---|---|
+| [`brewlet/brewlet`](https://github.com/brewlet/brewlet) | CLI, OCI artifact support, containerd shim, and node-provisioner source |
+| [`brewlet/kubernetes`](https://github.com/brewlet/kubernetes) | Operator, admission webhooks, APIs, CRDs, manifests, and Helm chart |
+| [`brewlet/maven-plugin`](https://github.com/brewlet/maven-plugin) | Maven build and publishing integration |
+| [`brewlet/specs`](https://github.com/brewlet/specs) | Architecture contracts and enhancement proposals |
+| [`brewlet/integration-tests`](https://github.com/brewlet/integration-tests) | Cross-repository end-to-end harness and fixture applications |
+| [`brewlet/site`](https://github.com/brewlet/site) | [brewlet.sh](https://brewlet.sh), user documentation, workshop, and brand assets |
+| [`brewlet/.github`](https://github.com/brewlet/.github) | Organization profile and shared community health files |
+
+Each repository is independently versioned and built. The integration harness accepts
+separate core and Kubernetes checkouts, so changes can be tested across repository
+branches before they are merged.
